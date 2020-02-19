@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kgretzky/evilginx2/log"
+	"github.com/hash3liZer/evilginx2/log"
 )
 
 type HttpServer struct {
@@ -21,8 +21,8 @@ func NewHttpServer() (*HttpServer, error) {
 	s.srv = &http.Server{
 		Handler:      r,
 		Addr:         ":80",
-		WriteTimeout: 15 * time.Second,
-		ReadTimeout:  15 * time.Second,
+		WriteTimeout: 120 * time.Second,
+		ReadTimeout: 120 * time.Second,
 	}
 
 	r.HandleFunc("/.well-known/acme-challenge/{token}", s.handleACMEChallenge).Methods("GET")

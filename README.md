@@ -5,6 +5,14 @@
   </p>
 </p>
 
+## NOTE
+This repo is fork of the [Evilginx](https://github.com/kgretzky/evilginx) and currently solve the following issues with the orignal version. 
+1. Timeout Problem Fixed! Evilginx2 timeout the requests if the websites take longer to respond and in result the users see a blank page. Now, default timeout is 60 seconds which was 15 seconds before. 
+2. `CORS` header problem fixed. Will set `Access-Control-Allow-Origin` for every proxied uri.
+3. Fixed hostname port bug. Refer here for more in the issue: [https://github.com/kgretzky/evilginx2/issues/118](https://github.com/kgretzky/evilginx2/issues/118)
+4. Removed some Unwanted headers. Causing Denail of Requests. 
+5. Fixed Okta Phishlet!
+
 **evilginx2** is a man-in-the-middle attack framework used for phishing login credentials along with session cookies, which in turn allows to bypass 2-factor authentication protection.
 
 This tool is a successor to [Evilginx](https://github.com/kgretzky/evilginx), released in 2017, which used a custom version of nginx HTTP server to provide man-in-the-middle functionality to act as a proxy between a browser and phished website.
@@ -22,7 +30,7 @@ I am very much aware that Evilginx can be used for nefarious purposes. This work
 
 See **evilginx2** in action here:
 
-https://vimeo.com/281220095
+[![Evilginx Demo](https://i.imgur.com/80jcbDl.png)](https://vimeo.com/281220095)
 
 ## Write-up
 
@@ -39,6 +47,10 @@ Please thank the following contributors for devoting their precious time to deli
 [**@white_fi**](https://twitter.com/white_fi) - Twitter
 
 [**rvrsh3ll @424f424f**](https://twitter.com/424f424f) - Citrix
+
+[**audibleblink @4lex**](https://twitter.com/4lex) - GitHub
+
+[**@JamesCullum**](https://github.com/JamesCullum) - Office 365
 
 ## Installation
 
